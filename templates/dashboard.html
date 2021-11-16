@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url(' {{url_for('static',filename='assets/img/post-bg.jpg')}} ')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>Admin Dashboard</h1>
+                    <span class="subheading">Manage Your Posts From Here</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<div class="container">
+  <h1 style="float: left; margin-bottom: 30px;">Posts Table</h1>
+
+  <a href="/logout"><button class="btn btn-warning" style="float: right; position: relative;bottom: 10px; right: 10px; margin-bottom: 3px;">Logout</button></a>
+  <a href="/edit/post-add-post">  <button class="btn btn-success" style="float: right; position: relative;bottom: 10px;margin-right: 20px; right: 10px; margin-bottom: 3px;" >Add new Post</button></a>
+
+
+
+  <div>
+  <form class="file-uploadx" action="/uploader" method="post" enctype="multipart/form-data">
+  
+    <input type="file" name="file" id="file-upload">
+    <label for="file-upload" style="float: right; position: relative; margin-right: 30px; margin-bottom: 3px;">
+      <i class="material-icons">addphoto</i>
+      Upload a File
+    </label>
+
+
+
+    <button style="display: inline-block; vertical-align: top; float: right; margin-right:30px; bottom: 11px; position: relative; margin-bottom: 3px;" class="btn btn-primary">Submit</button>
+    
+
+
+
+  </form>
+</div>
+
+</div>
+
+
+<div class="container">
+
+      <table class="table table-hover table-bordered table-striped">
+      <thead class="table table-dark">
+        <tr>
+          <th>No.</th>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Show Post</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %}
+        <tr>
+          <td>{{post.sno}}</td>
+          <td>{{post.date}}</td>
+          <td>{{post.title}}</td>
+          <td> <a href="/post/{{post.slug}}" target="_blank"> <button class="btn btn-secondary text-uppercase">Show</button></a></td>
+          <td> <a href="/edit/post-{{post.sno}}"> <button class="btn btn-primary text-uppercase">Edit</button></a></td>
+          <td> <a href="/post/delete-post-{{post.sno}}"><button class="btn btn-danger text-uppercase">Delete</button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+      
+</div>
+
+
+
+{% endblock %}
