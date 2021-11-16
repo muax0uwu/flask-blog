@@ -1,0 +1,18 @@
+{
+  "params":{
+    "local_server": "True",
+    "local_uri": "",
+    "prod_uri": "",
+    "fb_url": "https://www.facebook.com/profile.php",
+    "gmail": "",
+    "gmail_pass": ""
+  },
+
+  "dashboard": {
+    "upload_folder": "static//assets//img",
+    "user_name": "007alex007",
+    "user_pass": "fahim_murgi"
+  }
+
+
+}
