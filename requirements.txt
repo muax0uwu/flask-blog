@@ -1,4 +1,4 @@
 Flask==2.0.2
 werkzeug==2.0.2
-Flask_SQLALCHEMY==2.4.4
+Flask-SQLAlchemy==2.4.4
 gunicorn==19.9.8
