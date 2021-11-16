@@ -1,2 +1,4 @@
-flask==2.0.2
+Flask==2.0.2
 werkzeug==2.0.2
+Flask_SQLALCHEMY==2.4.4
+gunicorn==19.9.8
