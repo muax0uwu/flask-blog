@@ -1,7 +1,7 @@
 {
   "params":{
     "local_server": "True",
-    "local_uri": "mysql://b0cc1049d026d1:da2394e8@eu-cdbr-west-03.cleardb.net/heroku_3b61f10a737bcca?reconnect=true",
+    "local_uri": "",
     "prod_uri": "",
     "fb_url": "https://www.facebook.com/profile.php",
     "gmail": "",
